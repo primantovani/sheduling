@@ -1,0 +1,116 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Defina uma nova cor personalizada */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Adicione a cor personalizada */
+@layer components {
+  .hover-bg-customYellow:hover {
+    background-color: #dec756;
+  }
+}
+
+body,
+.quicksand-semibold {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  position: relative; /* Adicionado para definir um contexto de empilhamento */
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 30px;
+  position: absolute; /* Adicionado para definir a posição absoluta */
+  top: 0; /* Fixa o cabeçalho no topo */
+  left: 0; /* Alinha o cabeçalho à esquerda */
+  z-index: 1; /* Define a ordem de empilhamento */
+}
+
+header > button {
+  height: 32px;
+  width: 32px;
+  background: none;
+  border: none;
+  stroke: #000;
+}
+
+.none {
+  display: none;
+}
+
+.btn-menu {
+}
+
+.btn-voltar {
+}
+
+.bg-customYellow {
+  background-color: #dec756;
+}
+
+.hover-bg-dec756:hover {
+  background-color: #dec756;
+}
+.text-dec756 {
+  color: #dec756;
+}
+.border-dec756 {
+  border-color: #dec756;
+}
+
+.bg-img-1 {
+  background-image: url("./assets/img_1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.bg-img-2 {
+    background-image: url("./assets/img_2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+.bg-img-mascara {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Cor de máscara semi-transparente */
+  position: absolute; /* Torna o elemento posicionado de forma absoluta */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Coloca a máscara acima da imagem de fundo, mas ainda atrás do conteúdo */
+}

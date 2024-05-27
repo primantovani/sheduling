@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheduling</title>
+    <!-- Incluindo Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Incluindo Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Definindo classes personalizadas para a fonte Quicksand */
+        body, 
+        .quicksand-semibold {
+            font-family: 'Quicksand', sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .bg-customYellow {
+            background-color: #DEC756;
+        }
+
+        .hover-bg-dec756:hover {
+            background-color: #DEC756;
+        }
+        .text-dec756 {
+            color: #DEC756;
+        }
+        .border-dec756 {
+            border-color: #DEC756;
+        }
+
+        .bg-img-1 {
+            background-image: url('./assets/img_1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .bg-img-mascara {
+            border-color: white;
+            opacity: 0.5;
+        }
+
+        .bg-img-2 {
+            background-image: url('./assets/img_2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+
+        
+
+
+    
+    </style>
+</head>
+<body>
+
+    
+    <!-- Tela de Carregamento
+    <div class="bg-customYellow flex flex-col items-center justify-center w-screen h-screen" id="loadingScreen">
+        <img src="./assets/logo_1.png" alt="logo_sheduling" class="mb-36">
+        <img src="./assets/corregando.png" alt="carregando" class="animate-spin h-16">
+    </div> -->
+
+
+
+    <form >
+        <!-- Formulário de Cadastro pag 1-->
+        <div class="pagina">
+            <div class="bg-img-1 bg-img-mascara">
+            </div>
+                <div class="relative z-1 form-container flex flex-col items-center justify-center w-screen h-screen" id="pagCadastro1">
+                    <label class="text-2xl mb-16">Qual é o nome da sua empresa?</label>
+                        <input type="text" name="companyName" placeholder="Escreva aqui o nome da sua empresa" required class="w-80 mt-1 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus-dec756 sm:text-sm">
+                        
+                </div>
+        </div>
+
+        <!-- Formulário de Cadastro pag 2-->
+        <div class="pagina" style="display: none;">
+            <div class="bg-img-2">
+            </div>
+                <div class="relative z-2 form-container flex flex-col items-center justify-center w-screen h-screen" id="pagCadastro2">
+                    <label class="text-2xl mb-16">Quais serviços você oferece?</label>
+                        <input type="text" name="services" placeholder="Escreva aqui" required class="w-80 mt-1 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus-dec756 sm:text-sm">
+                </div>
+        </div>
+
+        <button type="submit" class="btn-continuar mt-16 inline-flex justify-center items-center py-2 px-4 border border-transparent bg-white shadow-sm text-sm font-medium rounded-md bg-dec756 hover-bg-dec756 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dec756">continuar<img src="./assets/seta.png" alt="Seta" class="ml-2 h-2 w-3"></button>
+
+    </form>
+
+
+
+    </div>
+    
+    
+
+
+    
+<!-- Inclusão do arquivo JavaScript -->
+<script src="./main.js" defer></script>
+
+</body>
+</html>

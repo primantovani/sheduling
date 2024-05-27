@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sheduling</title>
+    <!-- Incluindo Tailwind CSS via CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Incluindo Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Incluindo seu arquivo CSS -->
+    <link href="./style.css" rel="stylesheet" />
+    <!-- Verifique o caminho -->
+  </head>
+  <body>
+    <header>
+      <button class="btn-voltar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="inherit"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+          />
+        </svg>
+      </button>
+      <button class="btn-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="inherit"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </header>
+
+  <!-- Pág 1 -->
+    <main>
+      <div class="none relative flex justify-center items-center w-screen h-screen">
+        <div class="bg-img-1"></div>
+        <div class="bg-img-mascara"></div>
+        <div class="cadastro-container flex justify-center items-center w-4/5">
+          <form class="formulario-cadastro flex justify-center items-center">
+            <div class="campo flex flex-col justify-center items-center">
+              <label class="text-xl mb-8 justify-center items-center"
+                >Qual é o nome da sua empresa?</label
+              >
+              <input
+                class="mb-16 mt-8 min-w-full text-sm bg-transparent border border-black rounded-lg p-1"
+                type="text"
+                name="nome"
+                placeholder=" Escreva aqui o nome da sua empresa"
+                required
+              />
+              <button
+                class="btn-padrao bg-white hover:bg-customYellow py-0.5 px-4 rounded flex items-center space-x-2"
+              >
+                <span class="inline-block">continuar</span>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+<!-- Pág 2 -->
+      <div class="relative flex justify-center items-center w-screen h-screen">
+        <div class="bg-img-2"></div>
+        <div class="bg-img-mascara"></div>
+        <div class="cadastro-container flex justify-center items-center w-4/5">
+          <form class="formulario-cadastro flex justify-center items-center">
+            <div class="campo flex flex-col justify-center items-center">
+              <label class="text-xl mb-8 justify-center items-center"
+                >Quais serviços você oferece?</label
+              >
+              <input
+                class="mb-16 mt-8 min-w-full text-sm bg-transparent border border-black rounded-lg p-1"
+                type="text"
+                name="nome"
+                placeholder=" Escreva aqui o nome da sua empresa"
+                required
+              />
+              <button
+                class="btn-padrao bg-white hover:bg-customYellow py-0.5 px-4 rounded flex items-center space-x-2"
+              >
+                <span class="inline-block">continuar</span>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
