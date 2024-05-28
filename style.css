@@ -22,6 +22,7 @@ body,
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  font-size: 14px;
 }
 
 main {
@@ -48,6 +49,17 @@ header > button {
   background: none;
   border: none;
   stroke: #000;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 30px;
+  position: absolute; /* Adicionado para definir a posição absoluta */
+  top: 0; /* Fixa o cabeçalho no topo */
+  left: 0; /* Alinha o cabeçalho à esquerda */
+  z-index: 1; /* Define a ordem de empilhamento */
 }
 
 .none {
@@ -100,6 +112,20 @@ header > button {
     z-index: -2;
   }
 
+  .bg-img-3 {
+    background-image: url("./assets/img_3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+
 .bg-img-mascara {
   background-color: rgba(
     255,
@@ -114,3 +140,19 @@ header > button {
   height: 100%;
   z-index: -1; /* Coloca a máscara acima da imagem de fundo, mas ainda atrás do conteúdo */
 }
+
+/* Maior que tablet (768px) */
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+  .pagina > .logo:not(.cadastro-logo):not(.entrar-logo) {
+    display: none;
+  }
+
+  .bg-img-3 {
+    background-image: url("./assets/img_3_h.png");
+    
+  }
+}
+
