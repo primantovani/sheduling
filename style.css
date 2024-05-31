@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 /* Defina uma nova cor personalizada */
 @tailwind base;
@@ -23,7 +23,9 @@ body,
   font-weight: 600;
   font-style: normal;
   font-size: 14px;
+  
 }
+
 
 main {
   display: flex;
@@ -100,39 +102,59 @@ header {
 }
 
 .bg-img-2 {
-    background-image: url("./assets/img_2.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
+  background-image: url("./assets/img_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
 
-  .bg-img-3 {
-    background-image: url("./assets/img_3.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-  }
+.bg-img-3 {
+  background-image: url("./assets/img_3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
 
+.bg-img-4 {
+  background-image: url("./assets/image_4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+.bg-img-4-h {
+  background-image: url("./assets/img_4_h.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
 
 .bg-img-mascara {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Cor de máscara semi-transparente */
+  background-color: rgba(255, 255, 255, 0.8); /* Cor de máscara semi-transparente */
   position: absolute; /* Torna o elemento posicionado de forma absoluta */
   top: 0;
   left: 0;
@@ -140,6 +162,3 @@ header {
   height: 100%;
   z-index: -1; /* Coloca a máscara acima da imagem de fundo, mas ainda atrás do conteúdo */
 }
-
-
-
