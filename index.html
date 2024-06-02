@@ -54,7 +54,7 @@
 
     <!-- Página 1 -->
     <main>
-      <div class="none relative flex justify-center items-center w-screen h-screen">
+      <div id="multiPageForm" class="form-page activ relative flex justify-center items-center w-screen h-screen">
         <div class="bg-img-1"></div>
         <div class="bg-img-mascara"></div>
         <div class="cadastro-container flex justify-center items-center w-4/5">
@@ -70,32 +70,15 @@
                 placeholder=" Escreva aqui o nome da sua empresa"
                 required
               />
-              <button
-                class="btn-padrao bg-white hover:bg-customYellow py-0.5 px-4 rounded flex items-center space-x-2"
-              >
-                <span class="inline-block">continuar</span>
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
             </div>
           </form>
         </div>
+        <!-- Your form fields for page 1 -->
+    <button type="button" onclick="nextPage()">Next</button>
       </div>
 
       <!-- Página 2 -->
-      <div class="none relative flex justify-center items-center w-screen h-screen">
+      <div class="form-page relative flex justify-center items-center w-screen h-screen">
         <div class="bg-img-2"></div>
         <div class="bg-img-mascara"></div>
         <div class="cadastro-container flex justify-center items-center w-4/5">
@@ -131,34 +114,37 @@
                   </svg>
                   <span class="inline-block">voltar</span>
                 </button>
-
+                
                 <button
-                  class="btn-padrao bg-white hover:bg-customYellow py-0.5 px-4 rounded flex items-center space-x-2"
+                class="btn-padrao bg-white hover:bg-customYellow py-0.5 px-4 rounded flex items-center space-x-2"
                 >
-                  <span class="inline-block">continuar</span>
-                  <svg
-                    class="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </form>
+                <span class="inline-block">continuar</span>
+                <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                >
+                <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+      </form>
+    </div>
+    <!-- Your form fields for page 2 -->
+<button type="button" onclick="prevPage()">Previous</button>
+<button type="button" onclick="nextPage()">Next</button>
       </div>
 
       <!-- Página 3 -->
-      <div class="none pagina-tempo relative flex justify-center items-center w-screen h-screen">
+      <div class="form-page pagina-tempo relative flex justify-center items-center w-screen h-screen">
         <div class="bg-img-3"></div>
         <div class="bg-img-mascara"></div>
         <div class="cadastro-container flex justify-center items-center w-4/5">
@@ -221,7 +207,7 @@
       </div>
 
       <!-- Página 4 -->
-      <div class="none pagina-tempo relative flex justify-center items-center w-screen h-screen">
+      <div class="form-page pagina-tempo relative flex justify-center items-center w-screen h-screen">
           <div class="bg-img-4-h md:bg-img-4-h"></div>
           <div class="bg-img-mascara"></div>
           <div class="cadastro-container flex justify-center items-center w-4/5">
@@ -388,7 +374,7 @@
 
 <!-- calendário -->
 
-<div class="flex flex-col items-center">
+<div class="form-page flex flex-col items-center"id="calendar">
   <div class=" mt-28 p-6 justify-center items-center md:w-2/4 ">
     <div id="calendar-header" class="flex justify-between items-center mb-4 mb-16 ">
         <button id="prev" class="text-gray-500 hover:text-gray-700">&lt;</button>

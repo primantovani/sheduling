@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const calendarDates = document.getElementById('calendar-dates');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
+    const pages = document.querySelectorAll('.form-page');
 
     let currentDate = new Date();
+    let currentPage = 0;
 
     function renderCalendar(date) {
         const year = date.getFullYear();
@@ -39,15 +41,41 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    prevButton.addEventListener('click', () => {
+    function showPage(pageIndex) {
+        pages.forEach((page, index) => {
+            page.classList.toggle('active', index === pageIndex);
+        });
+    }
+
+    function nextPage() {
+        if (currentPage < pages.length - 1) {
+            currentPage++;
+            showPage(currentPage);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 0) {
+            currentPage--;
+            showPage(currentPage);
+        }
+    }
+
+    prevButton.addEventListener('click', function() {
         currentDate.setMonth(currentDate.getMonth() - 1);
         renderCalendar(currentDate);
     });
 
-    nextButton.addEventListener('click', () => {
+    nextButton.addEventListener('click', function() {
         currentDate.setMonth(currentDate.getMonth() + 1);
         renderCalendar(currentDate);
     });
 
+    // Inicializar a página inicial
+    showPage(currentPage);
     renderCalendar(currentDate);
+
+    // Expor funções globalmente
+    window.nextPage = nextPage;
+    window.prevPage = prevPage;
 });

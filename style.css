@@ -64,6 +64,14 @@ header {
   z-index: 1; /* Define a ordem de empilhamento */
 }
 
+.form-page {
+  display: none;
+}
+
+.form-page.active {
+  display: block;
+}
+
 .none {
   display: none;
 }
@@ -162,3 +170,5 @@ header {
   height: 100%;
   z-index: -1; /* Coloca a máscara acima da imagem de fundo, mas ainda atrás do conteúdo */
 }
+
+
